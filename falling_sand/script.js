@@ -25,7 +25,6 @@ function generateGrid(size) {
       const row = document.createElement("div");
       row.classList.add("row");
       grid[i] = []; // make a new row in JS array
-  
       for (let j = 0; j < size; j++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");

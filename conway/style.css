@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --sandbox-size: 500px;
+}
+body {
+    background-color: #615d6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #312d2d;
+    color: #f6f7eb;
+    padding: 20px;
+    border-radius: 10px;
+}
+#sizeRange, #speedRange {
+    accent-color: #f6f7eb;
+}
+button {
+    background-color: #f6f7eb;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #312d2d;
+    cursor: pointer;
+    font-weight: bold;
+    flex-grow: 1;
+
+}
+.setup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cell {
+    width: calc(var(--sandbox-size) / var(--size));
+    height: calc(var(--sandbox-size) / var(--size));
+    /* border: 0.5px solid red; */
+}
+#sandbox {
+    display: flex;
+    flex-direction: column;
+    width: var(--sandbox-size);
+    height: var(--sandbox-size);
+    border: 1px solid #615d6c;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    width: var(--sandbox-size);
+    height: calc(var(--sandbox-size) / var(--size));
+}
+.cell[alive="true"] {
+    background-color: #ffffff;
+}
+.cell[alive="false"] {
+    background-color: #000000;
+}
+.startstop {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
