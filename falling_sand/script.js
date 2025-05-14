@@ -61,6 +61,14 @@ function generateGrid(size) {
         }
       }
     }
+    for (let j = 0; j < gridSize; j++) {
+      const cell = grid[gridSize - 1][j];
+      if (cell.getAttribute("alive") === "true") {
+        setTimeout(() => {
+          cell.setAttribute("alive", false);
+        }, 1000); // Wait for 300ms (you can adjust this value)
+      }
+    }
   
     setTimeout(() => simulateGravity(gridSize), 30);
 }
