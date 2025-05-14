@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --sandbox-size: 400px;
+    --accent: #f0a202
+}
+
+body {
+    background-color: #615d6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #312d2d;
+    color: #f6f7eb;
+    padding: 20px;
+    border-radius: 10px;
+}
+#sizeRange {
+    accent-color: var(--accent);
+}
+button {
+    background-color: var(--accent);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #f6f7eb;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.setup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cell {
+    width: calc(var(--sandbox-size) / var(--size));
+    height: calc(var(--sandbox-size) / var(--size));
+}
+#sandbox {
+    display: flex;
+    flex-direction: column;
+    width: var(--sandbox-size);
+    height: var(--sandbox-size);
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    width: var(--sandbox-size);
+    height: calc(var(--sandbox-size) / var(--size));
+}
+.cell[alive="true"] {
+    background-color: var(--accent);
+}
+.cell[alive="false"] {
+    background-color: #615d6c;
+}
